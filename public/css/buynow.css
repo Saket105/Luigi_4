@@ -1,0 +1,62 @@
+.model-payment {
+  background-color: #303030;
+  color: aliceblue;
+  width: 500px;
+  height: 300px;
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.close-confirmation {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+.model-header {
+  font-size: 1.8rem;
+  text-align: center;
+  text-decoration: underline;
+  color: rgb(188, 235, 80);
+  font-weight: bold;
+}
+
+.payment-method {
+  font-size: 1.4rem;
+  color: #eb4040;
+  text-align: left;
+}
+
+.radio-inputs {
+  padding-left: 20px;
+  text-align: left;
+}
+
+.confirm-btn {
+  padding: 5px 20px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: green;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.confirm-btn:focus{
+  border: none;
+  outline: none;
+}
+
+.thank-text {
+  font-size: 2.2rem;
+}
+
+.text-center {
+  transform: translateX(20px);
+  margin-bottom: 20px;
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>RAGE</title>
+        <!-- bootstrap FILES -->
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        />
+        <script
+            src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+            defer
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            defer
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            defer
+        ></script>
+        <!-- fontawesome -->
+        <script
+            src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
+            defer
+        ></script>
+        <!-- css styles -->
+        <link href="/css/style.css" rel="stylesheet" />
+        <!-- <link rel="stylesheet" href="/css/products.css"> -->
+        <!-- my scripts -->
+        <script src="js/products.js" defer></script>
+        <% if(name) { %>
+        <script src="js/logout.js" defer></script>
+        <% } %>
+    </head>
+    <body>
+        <!-- Navigation -->
+        <%- include('../includes/navigation') %>
+
+        <!-- show for login error -->
+        <%- include('../includes/loginerror') %>
+
+        <!-- a card for attraction -->
+        <%- include('../includes/attractioncard') %>
+
+        <!-- displaying card of products -->
+        <div class="container">
+            <input
+                type="text"
+                name="email"
+                id="email"
+                value="<%= email %>"
+                hidden
+            />
+            <div class="product-cards row">
+                <% if(products.length === 0) { %>
+                <h1>No Products Available Now</h1>
+                <h3>Please try agail Later</h3>
+                <% }else{ %> <% products.forEach((p) => { %>
+                <div class="col-md-4">
+                    <div
+                        class="card card-product card-product-camera mx-auto"
+                        style="width: 300px"
+                    >
+                        <img
+                            class="card-img-top prod-img mx-auto"
+                            src="../img/shoes<%= p.PRODUCT_ID %>.jpg"
+                        />
+                        <div class="card-body">
+                            <p class="card-title"><%= p.NAME %></p>
+                            <p class="card-text">Price: ₹<%= p.PRICE %></p>
+                            <% if(p.STOCK > 0) { %>
+                            <button
+                                data-id="<%= p.PRODUCT_ID %>"
+                                class="btn btn-success buy-now"
+                            >
+                                Buy Now
+                            </button>
+                            <% } else { %>
+                            <button
+                                data-id="<%= p.PRODUCT_ID %>"
+                                class="btn btn-outline-danger buy-now"
+                                disabled
+                            >
+                                Buy Now
+                            </button>
+                            <% } %>
+                            <button
+                                data-id="<%= p.PRODUCT_ID %>"
+                                class="btn btn-secondary add-to-cart"
+                            >
+                                Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <% }) %> <% } %>
+            </div>
+        </div>
+
+        <!--- Footer -->
+        <%- include('../includes/footer') %>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- css files -->
+    <!-- <link rel="stylesheet" href="adminlogin.css" /> -->
+    <link rel="stylesheet" href="../css/login.css">
+    <script src="https://kit.fontawesome.com/8cc2295932.js" crossorigin="anonymous" defer></script>
+    <!-- js files -->
+    <script src="../js/login.js" defer> </script>
+    <title>RAGE</title>
+  </head>
+  <body>
+    <div class="container">
+      <% if(loginFailed) { %>
+        <div class="error-login">
+          <i class="fas fa-times"></i>
+          <%= errorMessage %>
+        </div>
+      <% } %>
+      <% if(login) { %>
+        <div class="error-login">
+          <i class="fas fa-times"></i>
+          PLEASE LOGIN TO ENTER
+        </div>
+      <% } %>
+      <form id="form" class="form" action="login" method="POST">
+        <h2>LOGIN</h2>
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="text" id="email" placeholder="Enter email" name="email"/>
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="Enter password" name="password"/>
+          <small>Error message</small>
+        </div>
+        <div class="buttons">
+          <button type="submit">Login</button>
+          <a class="signup-btn" href="/signup">Signup</a>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

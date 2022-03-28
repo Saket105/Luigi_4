@@ -1,0 +1,14 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  align-items: center;
+  background-color: #db3d3d;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+}

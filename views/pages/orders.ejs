@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- referef files, links, libraries -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/cart.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+  
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <% if(name) { %>
+    <script src="js/logout.js" defer></script>
+  <% } %>
+
+  <title>RAGE</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <%- include('../includes/navigation') %>
+
+  <h1>YOUR ORDERS</h1>
+  <div class="container">
+    <ul class="cart-list">
+      <% if(items.length === 0) { %>
+        <h4>You Have Not Bought Anything</h4>
+      <% } else { %>
+        <% items.forEach((item, index) => { %>
+          <li class="cart-item">  
+            <div class="number"><%= index+1 %></div>
+            <div class="product-name"><%= item.NAME %></div>
+            <div class="price"><%= item.PRICE %></div>
+            <button class="btn btn-outline-danger date-purchase"><%= item.DATE %></button>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+  </div>
+</body>
+</html>

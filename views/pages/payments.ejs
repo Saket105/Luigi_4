@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Das Cinemas</title>
+  <!-- css files -->
+  <link rel="stylesheet" href="/css/payments.css">
+  <!-- js files -->
+  <script src="/js/payment.js" defer></script>
+  <!-- fontawesome cdn -->
+  <script src="https://kit.fontawesome.com/8cc2295932.js" crossorigin="anonymous" defer></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+       RAGE
+      </div>
+      <div class="payments-container">
+        <a href="#" class="signup">Signup</a>
+        <a href="#" class="login">Login</a>
+    </div>
+</nav>
+
+  <div class="container">
+    <!-- <div class="bill">
+      <h2>YOUR BILL</h2>
+      <hr>
+      <p>Total Price <em>Rs. 275</em></p>
+      <p>Tax <em>Rs. 27.5</em></p>
+      <p>Entertainment Tax <em>Rs. 2.75</em></p>
+      <hr>
+      <hr class="red">
+      <p>Total <em>Rs 323.32</em></p>
+    </div> -->
+    <div class="payments">
+      <div class="cards-img">
+        <i class="fab fa-cc-visa fa-3x"></i>
+        <i class="fab fa-cc-mastercard fa-3x"></i>
+        <i class="fab fa-cc-stripe fa-3x"></i>
+        <i class="fab fa-cc-paypal fa-3x"></i>
+        <i class="fab fa-cc-amazon-pay fa-3x"></i>
+      </div>
+      <form>
+        <div class="center">
+          <h4>Card Info</h4>
+          <div>
+          <label class="wid" for="acc-name">Name</label>
+          <input type="text" name="acc" id="acc-name">
+          </div>
+          <div>
+            <label for="number">Card Number</label>
+            <input type="number" name="number" id="acc-no">
+          </div>
+          <div>
+            <label for="cvv">CVV</label>
+            <input type="number" name="cvv" id="cvv">
+            <label for="acc-name">Exp. Date</label>
+            <input type="date" name="date" id="date">
+          </div>
+        </div>
+        <hr class="line">
+        <div class="center">
+          <h4>User Info</h4>
+          <div>
+            <label for="adderss">Address</label>
+            <input type="text" name="address" id="adderss">
+          </div>
+          <div>
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email">
+          </div>
+        </div>
+        <hr class="line">
+        <button class="pay"> Pay</button>
+      </form>
+    </div>
+  </div>
+  <div class="model hide">
+    <a href="../index.html">
+      <i class="fas fa-times-circle fa-3x"></i>
+    </a>
+    <div class="model-containt">
+      <p class="p-top">Show this as your ticket at the entrance</p>
+      <img src="../assets/images/qr-code.jpg" alt="QR-CODE" srcset="">
+      <p class="p-bottom">The same will be sent to your mail specified "or" take a screenshot</p>
+    </div>
+  </div>
+</body>
+</html>

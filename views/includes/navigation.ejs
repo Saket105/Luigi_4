@@ -1,0 +1,52 @@
+<!-- Navigation -->
+<nav class="navbar navbar-expand-md navbar-light bg-dark">
+	<div class="container-fluid">
+		<div class="logo-img">
+			<img class="brang-img" src="./img/brand-logo.png" alt="RAGE">
+		</div>
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link text-light" href="/">Home</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link text-light" href="/orders">Orders</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link text-light" href="/cart">Cart</a>
+				</li>
+				<li class="nav-item ">
+					<a class="nav-link text-light" href="/buynow">BuyNow</a>
+				</li>
+				<% if(name) { %>
+					<li class="nav-item logout-user">
+						<a class="nav-link text-light" href="#"><i class="fas fa-user-circle"></i> <%= name %></a>
+					</li>
+
+					<div class="cover hide">
+						<div class="logout-form">
+							<form action="/logout" method="POST">
+								<p class="logout-text">Are you sure?</p>
+								<div class="logout-buttons">
+									<button type="submit" class="btn btn-danger">Logout</button>
+									<button class="cancel-logout btn btn-success">Cancel</button>
+								</div>
+							</form>
+						</div>
+					</div>
+
+				<% } else { %>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="/signup">Signup</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link text-light" href="/login">Login</a>
+					</li>
+				<% } %>
+			</ul>
+		</div>
+	</div>
+</nav>

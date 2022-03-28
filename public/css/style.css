@@ -1,0 +1,409 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Lato:ital@1&family=Lobster&family=Pangolin&family=Recursive:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: #0c0d0f;
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+}
+
+
+                        /* navbar styles */
+.navbar {
+  padding-top: 0.3rem;
+  background-color: #dedede1F;
+} 
+
+.navbar-nav li {
+  padding-right: 20px;
+}
+
+.nav-link {
+  font-size: 1.6em !important;
+  color: #d5d5d5;
+}
+
+
+                          /* logout styles and positioning */
+.cover {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 10;
+}
+
+.logout-form {
+  margin-top: 200px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  background-color: #ffd900;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logout-text {
+  font-size: 2rem;
+  padding: 5px;
+  text-align: center;
+}
+
+.logout-buttons {
+  margin: 10px;
+  width: 250px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.logout-buttons button {
+  width: 45%;
+
+}
+
+                          /* carousel styles */
+.carousel-inner img {
+  width: 100%;
+  height: 450px;
+}
+
+.carousel-caption h1 {
+  font-size: 500%;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 15px #000;
+}
+
+.carousel-caption h3 {
+  font-size: 200%;
+  font-weight: 500;
+  text-shadow: 1px 1px 1px 10px #000;
+  padding-bottom: 1rem;
+}
+
+/* a card to attract memberships */
+.member-card{
+  margin: 20px 10%;
+  background-color: #dedede1F;
+  border-radius: 10px;
+  color: #ffffff;
+  padding: 50px 50px 0 50px;
+  display: flex;
+}
+
+.logo{
+  color: #ffd900;
+  font-size: 40px;
+  font-family: 'Recursive', sans-serif;
+  text-shadow: 2px 2px 20px #ffd900;
+}
+
+.member-card .row-one{
+  width: 60%;
+  font-size: 16px;
+}
+
+.member-card .row-two{
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateY(-20px);
+}
+
+.member-card .row-one h3{
+  margin-bottom: 30px;
+}
+
+#lobster-font{
+  font-family: 'Lobster', cursive;
+  font-size: 1.2rem;
+}
+
+.member-card a:last-of-type{
+  text-decoration: none;
+  color: #ffffff;
+  margin-left: 20px;
+}
+
+.row-two .logo{
+  margin-right: 40px;
+}
+
+.special-style{
+  font-size: 50px;
+  font-weight: 700px;
+  font-family: 'Dancing Script', cursive;
+  text-shadow: 2px 2px 2px #ffd900;
+  transform: rotate(-18deg);
+}
+
+                    /* styles for welcome */
+.text-white{
+  color: rgb(206, 197, 197);
+}
+
+                    /* cards styles */
+
+.card{
+  border: none;
+  margin: 0 10px;
+}
+
+
+                    /* STYLES FOR social media */
+.social a {
+  font-size: 4.5em;
+  padding: 3rem;
+} */
+
+.fa-facebook{
+  color: #3b5998;
+}
+
+.fa-twitter {
+  color: #00aced;
+}
+
+.fa-google-plus-g{
+  color: #dd4b39;
+}
+
+.fa-instagram {
+  color: #517fa4;
+}
+
+.fa-youtube {
+  color: #bb0000;
+}
+
+.fa-facebook:hover,
+.fa-twitter:hover,
+.fa-google-plus-g:hover,
+.fa-instagram:hover,
+.fa-youtube:hover {
+  color: #d5d5d5;
+}
+
+footer {
+  background-color: #3f3f3f;
+  color: #dfdfdf;
+  padding-top: 2rem;
+}
+
+hr.light {
+  border-top: 1px solid #d5d5d5;
+  width: 75%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+footer a{
+  color: #d5d5d5;
+}
+
+hr.light-100 {
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+}
+
+
+                                /* styling for pages */
+.product-cards{
+  margin-bottom: 20px;
+}
+.card-product{
+  height: 450px;
+  width: 250px;
+  padding-bottom: 5px;
+}
+
+.card-product-camera{
+  height: 500px;
+}
+
+.prod-img{
+  height: 250px;
+  max-width: 250px;
+}
+
+.card-title{
+  /* font-weight: bold; */
+  font-size: 1.1rem;
+}
+
+.card-product .card-body{
+  background-color: 31595E;
+}
+
+
+.date-purchase {
+  width: 157px; 
+  height: 30px; 
+  overflow:  hidden;
+}
+
+/* ERROR STYLES */
+.error-login{
+  background: #F00000;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #DC281E, #F00000);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #DC281E, #F00000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 15px;
+  text-align: center;
+  padding: 25px 15px 15px 15px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.fa-times{
+  position: absolute;
+  top: 10px;
+  right: 25px;
+}
+
+.hide{
+  display: none;
+}
+
+                                              /*---Media Queries --*/
+
+@media (max-width: 992px) {
+  .social a{
+    font-size: 4em;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-caption h1 {
+    font-size: 350%;
+  }
+  .carousel-caption h3 {
+    font-size: 140%;
+    font-weight: 400;
+    padding-bottom: .2rem;
+  }
+  .display{
+    font-size: 200%;
+  }
+  .social a{
+    font-size: 2.5em;
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-caption h1 {
+    font-size: 250%;
+  }
+  .carousel-caption h3 {
+    font-size: 110%;
+  }
+  .carousel-indicators {
+    display: none;
+  }  
+  .social a{
+    font-size: 2em;
+    padding: .7rem;
+  }
+
+  .hide-mobile{
+    display: none;
+  }
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,102,203, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+.custom-toggler.navbar-toggler {
+  border-color: rgb(255,102,203);
+} 
+
+/*---Firefox Bug Fix --*/
+.carousel-item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+}
+
+/*--- Fixed Background Image --*/
+figure {
+  position: relative;
+  width: 100%;
+  height: 60%;
+  margin: 0!important;
+}
+
+.fixed-wrap {
+  clip: rect(0, auto, auto, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#fixed {
+  background-image: url('img/mac.png');
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  will-change: transform;
+}
+/*--- Bootstrap Padding Fix --*/
+[class*="col-"] {
+    padding: 1rem;
+}
+
+
+
+
+
+/*
+Extra small (xs) devices (portrait phones, less than 576px)
+No media query since this is the default in Bootstrap
+
+Small (sm) devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+Medium (md) devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+Large (lg) devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+Extra (xl) large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
+*/
+
+
+
+
+
+
+
+

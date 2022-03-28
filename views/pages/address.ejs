@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- style sheets -->
+    <link rel="stylesheet" href="../css/signup.css" />
+    <!-- js files -->
+    <script src="../js/address.js" defer></script>
+    <title>RAGE</title>
+  </head>
+  <body>
+
+    <div class="container">
+      <form action="/signup/address" method="POST" id="form" class="form">
+        <input type="text" name="email" id="email" value="<%= email %>" hidden>
+        <h2>Your Address Details</h2>
+        <div class="form-control">
+          <label for="state">State</label>
+          <input type="text" id="state" name="state" placeholder="State" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="city">City</label>
+          <input type="text" id="city" name="city" placeholder="City" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="pincode">Pincode</label>
+          <input type="number" id="pincode" name="pincode" placeholder="Pincode" />
+          <small>Error message</small>
+        </div>
+        <div class="form-control">
+          <label for="houseno">House NO</label>
+          <input type="number" id="houseno" name="houseno" placeholder="House No" />
+          <small>Error message</small>
+        </div>
+        <div class="btn-container">
+          <button class="submit-btn" type="submit">Submit</button>
+          <!-- <a class="a-btn" href="/login">Skip</a> -->
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

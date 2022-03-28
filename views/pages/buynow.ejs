@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- referef files, links, libraries -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/cart.css">
+  <link rel="stylesheet" href="css/buynow.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" defer></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
+  
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <!-- my scripts -->
+  <script src="js/buynow.js" defer> </script>
+  <% if(name) { %>
+    <script src="js/logout.js" defer></script>
+  <% } %>
+
+  <title>RAGE</title>
+</head>
+<body>
+  <!-- Navigation -->
+  <%- include('../includes/navigation') %>
+
+  <h1>Order Now</h1>
+  <div class="container">
+    <input type="text" id="email" value="<%= email %>" hidden>
+    <ul class="cart-list">
+      <% if(items.length === 0) { %>
+        <h4>NO ITEMS IN CART</h4>
+      <% } else { %>
+        <% items.forEach((item, index) => { %>
+          <li class="cart-item">  
+            <div class="number"><%= index+1 %></div>
+            <div class="product-name"><%= item.NAME %></div>
+            <div class="price"><%= item.PRICE %></div>
+            <% if(item.STOCK) { %>
+              <button class="btn btn-outline-primary delete-item" data-purchase-id="<%= item.PURCHASE_ID %>" data-prodid="<%= item.PROD_ID %>">Delete</button>
+            <% } else { %>
+              <button class="btn btn-outline-primary" disabled>finished</button>
+            <% } %>
+            <button class="btn btn-outline-danger move-to-cart" data-purchase-id="<%= item.PURCHASE_ID %>" data-prodid="<%= item.PROD_ID %>">Move to cart</button>
+          </li>
+        <% }) %>
+      <% } %>
+    </ul>
+    <button class="btn btn-success" id="place-order">Place Order</button>
+  </div>
+
+  <!-- consfirming order model -->
+  <!-- <div class="cover confirm-purchase hide">
+    <div class="model-payment">
+      <i id="close-confirmation" class="fas fa-times-circle fa-2x"></i> 
+      <p class="model-header">Confirm purchase</p>
+      <p class="payment-method">Choose payment Method</p>
+      <div class="radio-inputs">
+        <div class="radio">
+          <input type="radio" name="payment" id="card" value="card" checked>
+          <label for="card">Pay By Card</label>
+        </div>
+        <div class="radio">
+          <input type="radio" name="payment" id="cash" value="cash">
+          <label for="cash">Cash On Delivery</label>
+        </div>
+      </div>
+      <button class="confirm-btn">Confirm</button>
+    </div>
+  </div> -->
+
+  <!-- thank you message -->
+  <div class="cover thank-you hide">
+    <div class="model-payment">
+      <p class="thank-text">Thanks For Shopping with us</p>
+        <div class="row-two mx-auto text-center">
+          <div class="logo">LOVE RAGE</div>
+        </div>
+        <a href="/" class="btn btn-info">Back TO Home</a>
+    </div>
+  </div>
+</body>
+</html>
